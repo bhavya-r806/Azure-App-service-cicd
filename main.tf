@@ -10,15 +10,14 @@ resource "azurerm_resource_group" "app-rg" {
 }
 
 
-resource "azurerm_app_service_plan" "asp" {
+resource "azurerm_service_plan" "asp" {
   name                = "dotnet-asp"
   location            = var.location
   resource_group_name = var.resource_group_name
+   os_type             = "Windows" # or "Linux"
+  sku_name            = "S1"
 
-  sku {
-    tier = "Standard"
-    size = "S1"
-  }
+  
 }
 
 resource "azurerm_app_service" "app" {

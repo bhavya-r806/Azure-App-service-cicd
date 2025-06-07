@@ -12,3 +12,9 @@ resource "azurerm_key_vault_secret" "example" {
   value        = "SuperSecret123"
   key_vault_id = azurerm_key_vault.kv.id
 }
+
+resource "random_string" "suffix" {
+  length  = 6
+  upper   = false
+  special = false
+}
