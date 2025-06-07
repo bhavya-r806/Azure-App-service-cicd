@@ -14,10 +14,10 @@ resource "azurerm_service_plan" "asp" {
   name                = "dotnet-asp"
   location            = var.location
   resource_group_name = var.resource_group_name
-   os_type             = "Windows" # or "Linux"
+  os_type             = "Windows" # or "Linux"
   sku_name            = "S1"
 
-  
+
 }
 
 resource "azurerm_app_service" "app" {
