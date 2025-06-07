@@ -24,7 +24,7 @@ resource "azurerm_app_service" "app" {
   name                = "dotnetapp-${random_string.suffix.result}"
   location            = var.location
   resource_group_name = var.resource_group_name
-  app_service_plan_id = azurerm_app_service_plan.asp.id
+  app_service_plan_id = azurerm_service_plan.asp.id
 
   site_config {
     dotnet_framework_version = "v4.0"
