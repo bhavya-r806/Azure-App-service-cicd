@@ -29,7 +29,7 @@ resource "azurerm_service_plan" "asp" {
 
 }
 
-resource "aazurerm_linux_web_app" "app" {
+resource "azurerm_linux_web_app" "app" {
   name                = "dotnetapp-${random_string.suffix.result}"
   location            = var.location
   resource_group_name = var.resource_group_name
