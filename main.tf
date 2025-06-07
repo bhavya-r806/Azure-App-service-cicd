@@ -1,8 +1,17 @@
-provider "azurerm" {
-  features {}
-  subscription_id = "fd240ce0-897d-4c0e-a243-662d89ccda9a"
-
+terraform {
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = ">= 3.0.0"
+    }
+    random = {
+      source  = "hashicorp/random"
+      version = ">= 3.0.0"
+    }
+  }
 }
+
+
 resource "azurerm_resource_group" "app-rg" {
   name     = var.resource_group_name
   location = var.location
