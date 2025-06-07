@@ -1,12 +1,12 @@
 provider "azurerm" {
-    features {}
-    subscription_id = "fd240ce0-897d-4c0e-a243-662d89ccda9a"
-  
+  features {}
+  subscription_id = "fd240ce0-897d-4c0e-a243-662d89ccda9a"
+
 }
 resource "azurerm_resource_group" "app-rg" {
-    name     =  var.resource_group_name
-    location = var.location
-  
+  name     = var.resource_group_name
+  location = var.location
+
 }
 
 
@@ -29,7 +29,7 @@ resource "azurerm_app_service" "app" {
 
   site_config {
     dotnet_framework_version = "v4.0"
-   
+
   }
 
   app_settings = {
