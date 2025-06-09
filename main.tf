@@ -16,7 +16,7 @@ resource "azurerm_service_plan" "asp" {
   location            = var.location
   resource_group_name = var.resource_group_name
   os_type             = "Windows" # or "Linux"
-  sku_name            = "F1"
+  sku_name            = "B1"
 
 
 }

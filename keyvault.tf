@@ -10,7 +10,7 @@ resource "azurerm_key_vault" "kv" {
 resource "azurerm_role_assignment" "keyvault_access" {
   scope                = azurerm_key_vault.kv.id
   role_definition_name = "Key Vault Secrets User"
-  principal_id         = "b5d31d33-9a2f-4f7e-a2f5-cfaa7bacc64d" # 👈 your SP object ID
+  principal_id         = "891ced47-c1cb-475b-8345-f1819eddf85a" # 👈 your SP object ID
 }
 
 # or system identity
